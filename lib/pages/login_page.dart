@@ -56,7 +56,6 @@ class _LoginPageState extends State<LoginPage> {
 
                     InkWell(
                       onTap: () async {
-
                         await Future.delayed(Duration(seconds: 1));
                         Navigator.pushNamed(context, MyRoutes.homeRoute);
                       },
@@ -65,8 +64,12 @@ class _LoginPageState extends State<LoginPage> {
                         height: changeButton ? 50 : 150,
                         width: 50,
                         alignment: Alignment.center,
-                        child: changeButton? Icon(Icons.done, color: Colors.white,)
-                        Text("Login"),
+                        child: changeButton
+                            ? Icon(
+                                Icons.done,
+                                color: Colors.white,
+                              )
+                            : Text("Login"),
                         decoration: BoxDecoration(
                             color: Colors.deepPurple,
                             borderRadius:
